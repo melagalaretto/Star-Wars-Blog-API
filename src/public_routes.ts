@@ -15,9 +15,11 @@ import { login } from './actions'
 const router = Router();
 
 // signup route, creates a new user in the DB
+//POST
 router.post('/user', safe(createUser));
+router.post('/login',safe(login))
+//GET
 router.get('/planets', safe(getPlanets));
 router.get('/characters', safe(getCharacters));
-router.post('/login',safe(login))
 
 export default router;

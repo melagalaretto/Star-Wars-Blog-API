@@ -159,7 +159,7 @@ export const getUsersFav = async (req: Request, res: Response): Promise<Response
 
 //controlador para el logueo
 export const login = async (req: Request, res: Response): Promise<Response> => {
-
+    
     if (!req.body.email) throw new Exception("Please specify an email on your request body", 400)
     if (!req.body.password) throw new Exception("Please specify a password on your request body", 400)
 
